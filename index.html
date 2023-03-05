@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up Form | The Odin Project</title>
+    <title>Sign-up Form | The Odin Project</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,28 +25,36 @@
             <p>Already have an account? <a href="">Login</a></p>
             <form class="signup-form" action="" method="">
                 <div class="row">
-                    <div class="form-group input-group col">
+                    <div class="form-control input-group col">
                         <label for="user_first_name">First Name</label>
                         <input type="text" name="user_first_name" id="user_first_name">
                     </div>
-                    <div class="form-group input-group col">
-                        <label for="user_last_name">Last Name</label>
+
+                    <div class="form-control input-group col">
+                        <label for="user_last_name">Last Name <span class="optional">(Optional)</span></label>
                         <input type="text" name="user_last_name" id="user_last_name">
                     </div>
                 </div>
-                <div class="form-group input-group">
+
+                <div class="form-control input-group">
                     <label for="user_email">Email</label>
-                    <input type="email" name="user_email" id="user_email">
+                    <input type="email" name="user_email" id="user_email" aria-describedby="email-help">
+                    <span id="email-help" class="error-msg icon">Please include an '@' in the email address.</span>
                 </div>
-                <div class="form-group input-group">
+
+                <div class="form-control input-group">
                     <label for="user_password">Password</label>
-                    <input type="password" name="user_password" id="user_password">
+                    <input type="password" name="user_password" id="user_password"
+                     minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" aria-describedby="password-help">
+                    <span id="password-help" class="error-msg icon">Use 8 or more characters, including an uppercase letter and number.</span>
                 </div>
-                <div class="form-group">
-                    <input type="checkbox" name="email_consent" id="email_consent">
+
+                <div class="form-control checkbox-group">
+                    <input class="icon" type="checkbox" name="email_consent" id="email_consent" value="get aesthetico emails">
                     <label for="email_consent">I want to get emails about cool stuff on Aesthetico</label>
                 </div>
-                <div class="form-group">
+
+                <div class="form-control">
                     <button class="signup-form__btn" type="submit">Create Account</button>
                 </div>
             </form>
