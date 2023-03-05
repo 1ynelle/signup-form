@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
+@font-face {
+    font-family: "Avenir";
+    src: url('fonts/avenirltstd-roman-webfont.woff2') format('woff2'),
+         url('fonts/avenirltstd-roman-webfont.woff') format('woff');
+}
+
+:root {
+    --clr-heading: #5674B8;
+    --clr-body: #111A34;
+    --clr-btn: #fff;
+    --bg-main: #fff;
+    --bg-btn: #308799;
+    --bg-input: #EFF2FD;
+
+    --block-padding: 4rem;
+}
+
+
+/* || Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+}
+
+
+/* || General Styles */
+body {
+    color: var(--clr-body);
+    font-family: 'Avenir', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+h1 {
+    color: var(--clr-heading);
+    font-family: 'Gochi Hand', sans-serif;
+    font-size: 4rem;
+    letter-spacing: .2rem;
+    line-height: 1.2;
+}
+
+a {
+    color: var(--clr-heading);
+}
+
+a:hover {
+    filter: brightness(1.2);
+}
+
+.container {
+    margin: 0 auto;
+    width: 85%;
+}
+
+
+/* || Sidebar */
+.sidebar {
+    background-image: url('images/wallpaper.png');
+    background-size: cover;
+    min-height: 25vh;
+    padding: var(--block-padding) 0;
+}
+
+.sidebar__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25vh;
+}
+
+.logo {
+    width: 4rem;
+}
+
+.sidebar__info {
+    color: white;
+}
+
+.sidebar__info p:first-of-type {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+/* || Sign-Up Panel */
+.signup-panel {
+    padding: var(--block-padding) 0;
+}
+
+.form-group,
+.signup-panel__terms {
+    margin-top: 2.4rem;
+}
+
+.input-group > * {
+    display: block;
+    width: 100%;
+}
+
+.input-group label {
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+.input-group input {
+    padding: 1em;
+    background-color: var(--bg-input);
+    border-radius: 0.4em;
+    border: none;
+}
+
+.input-group input:focus {
+    outline: 0.2rem solid var(--clr-heading);
+}
+
+.signup-form__btn {
+    background-color: var(--bg-btn);
+    border: none;
+    border-radius: 0.4em;
+    color: var(--clr-btn);
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    padding: 1em 1.6em;
+    transition: filter 0.15s ease;
+    width: 100%;
+}
+
+.signup-form__btn:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+}
+
+
+@media screen and (min-width: 400px) {
+    h1 {
+        font-size: 4.8rem;
+    }
+
+    .signup-form .row {
+        display: flex;
+        gap: 1.6rem;
+    }
+    
+    .signup-form .col {
+        flex: 1;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    body {
+        display: flex;
+    }
+
+    .container {
+        width: 80%;
+    }
+
+    .sidebar.col {
+        flex: 1;
+    }
+
+    .sidebar__container {
+        min-height: calc(100vh - (var(--block-padding) + 2rem)*2);
+    }
+
+    .signup-panel.col {
+        flex: 1.6;
+    }
+
+    .sidebar,
+    .signup-panel {
+        padding: calc(var(--block-padding) + 2rem) 0;
+    }
+
+    .signup-panel__container {
+        width: min(50rem, 80%);
+    }
+
+    .signup-panel.row {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .signup-form__btn {
+        width: auto;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .signup-panel {
+        padding: calc(var(--block-padding) + 4rem) 0;
+    }
+}
