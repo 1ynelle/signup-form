@@ -5,60 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign-up Form | The Odin Project</title>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <aside class="sidebar col">
+    <aside class="sidebar">
         <div class="container sidebar__container">
-            <img src="images/logo-2.png" alt="wallpaper logo" class="logo">
+            <img src="images/logo.png" alt="wallpaper logo" class="logo">
             <div class="sidebar__info">
                 <p>Access thousands of high resolution wallpapers for every aesthetic</p>
-                <p><em>Wallpaper by Lorem Ipsum</em></p>
+                <p>
+                    <em>Background from <cite><a href="https://wallpapercave.com/hd-anime-sky-light-wallpapers">Wallpaper Cave</a></cite></em>
+                </p>
             </div>
         </div>
     </aside>
 
-    <main class="signup-panel col row">
-        <div class="container signup-panel__container">
+    <main class="join-panel">
+        <div class="container join-panel__container">
             <h1>Join Aesthetico</h1>
             <p>Already have an account? <a href="">Login</a></p>
-            <form class="signup-form" action="" method="">
+
+            <form class="join-form" action="" method="">
                 <div class="row">
-                    <div class="form-control input-group col">
+                    <div class="form-control input-control col">
                         <label for="user_first_name">First Name</label>
                         <input type="text" name="user_first_name" id="user_first_name">
                     </div>
 
-                    <div class="form-control input-group col">
+                    <div class="form-control input-control col">
                         <label for="user_last_name">Last Name <span class="optional">(Optional)</span></label>
                         <input type="text" name="user_last_name" id="user_last_name">
                     </div>
                 </div>
 
-                <div class="form-control input-group">
+                <div class="form-control input-control">
                     <label for="user_email">Email</label>
                     <input type="email" name="user_email" id="user_email" aria-describedby="email-help">
                     <span id="email-help" class="error-msg icon">Please include an '@' in the email address.</span>
                 </div>
 
-                <div class="form-control input-group">
+                <div class="form-control input-control">
                     <label for="user_password">Password</label>
                     <input type="password" name="user_password" id="user_password"
                      minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" aria-describedby="password-help">
                     <span id="password-help" class="error-msg icon">Use 8 or more characters, including an uppercase letter and number.</span>
                 </div>
 
-                <div class="form-control checkbox-group">
+                <div class="form-control checkbox-control">
                     <input class="icon" type="checkbox" name="email_consent" id="email_consent" value="get aesthetico emails">
-                    <label for="email_consent">I want to get emails about cool stuff on Aesthetico</label>
+                    <label for="email_consent">I want to get emails about cool stuff on Aesthetico.</label>
                 </div>
 
-                <div class="form-control">
-                    <button class="signup-form__btn" type="submit">Create Account</button>
+                <div class="form-control btn-group">
+                    <button type="submit">Create Account</button>
                 </div>
             </form>
-            <p class="signup-panel__terms">By joining, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
+
+            <p class="join-panel__terms">By joining, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policy</a></p>
         </div>
     </main>
 </body>
