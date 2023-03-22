@@ -8,7 +8,7 @@ Submission for [TOP's Sign-up Form Project](https://www.theodinproject.com/lesso
 
 - Styling form elements (inputs, checkboxes) and their states with pseudoclasses and pseudoelements
 - Importing local fonts and Font Awesome icons
-- Mobile-first design
+- Flexbox and Mobile-first design
 - Creating a fixed sidebar
 
 HTML/CSS
