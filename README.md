@@ -1,8 +1,14 @@
-# Sign-up Form
+## 📃 Sign-up Form | The Odin Project
 
-Learned:
-- How to style form elements (inputs, checkboxes) and their states with pseudoclasses and pseudoelements
-- How to create a fixed sidebar
-- Importing custom fonts and Font Awesome icons
-- Using various CSS selectors and functions
+Submission for [TOP's Sign-up Form Project](https://www.theodinproject.com/lessons/node-path-intermediate-html-and-css-sign-up-form)
+
+**[🔗 Live Preview](https://1ynelle.github.io/signup-form)**
+
+#### Learned:
+
+- Styling form elements (inputs, checkboxes) and their states with pseudoclasses and pseudoelements
+- Importing local fonts and Font Awesome icons
 - Mobile-first design
+- Creating a fixed sidebar
+
+HTML/CSS
