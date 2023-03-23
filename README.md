@@ -4,6 +4,8 @@ Submission for [TOP's Sign-up Form Project](https://www.theodinproject.com/lesso
 
 **[🔗 Live Preview](https://1ynelle.github.io/signup-form)**
 
+<img src="/images/signup-form_top.png" alt="Library Site Image Preview" width="600">
+
 #### Learned:
 
 - Styling form elements (inputs, checkboxes) and their states with pseudoclasses and pseudoelements
